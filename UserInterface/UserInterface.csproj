@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B959EF3-B0A9-4790-B5DA-F719B452AA7D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>UserInterface</RootNamespace>
+    <AssemblyName>UserInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>UserInterface.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPdf, Version=2022.11.0.10347, Culture=neutral, PublicKeyToken=94e1c31412563c75, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPdf.Slim.2022.11.10347\lib\net40\IronPdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.7.0.0\lib\net462\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Menus\AdminService.cs" />
+    <Compile Include="Menus\CandidateService.cs" />
+    <Compile Include="Menus\MainMenu.cs" />
+    <Compile Include="Migrations\202212111136365_InitialCreate.cs" />
+    <Compile Include="Migrations\202212111136365_InitialCreate.Designer.cs">
+      <DependentUpon>202212111136365_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212111252524_ObjectComplete.cs" />
+    <Compile Include="Migrations\202212111252524_ObjectComplete.Designer.cs">
+      <DependentUpon>202212111252524_ObjectComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212111254225_ObjectComplete1.cs" />
+    <Compile Include="Migrations\202212111254225_ObjectComplete1.Designer.cs">
+      <DependentUpon>202212111254225_ObjectComplete1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212111443457_ObjectComplete2.cs" />
+    <Compile Include="Migrations\202212111443457_ObjectComplete2.Designer.cs">
+      <DependentUpon>202212111443457_ObjectComplete2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212111904455_ObjectCompleteVerification.cs" />
+    <Compile Include="Migrations\202212111904455_ObjectCompleteVerification.Designer.cs">
+      <DependentUpon>202212111904455_ObjectCompleteVerification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212111924151_Certificate.cs" />
+    <Compile Include="Migrations\202212111924151_Certificate.Designer.cs">
+      <DependentUpon>202212111924151_Certificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212111941233_Certificate1.cs" />
+    <Compile Include="Migrations\202212111941233_Certificate1.Designer.cs">
+      <DependentUpon>202212111941233_Certificate1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212112109200_Scores.cs" />
+    <Compile Include="Migrations\202212112109200_Scores.Designer.cs">
+      <DependentUpon>202212112109200_Scores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212152006257_Scores2nd.cs" />
+    <Compile Include="Migrations\202212152006257_Scores2nd.Designer.cs">
+      <DependentUpon>202212152006257_Scores2nd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212161737260_AttemptTableFix.cs" />
+    <Compile Include="Migrations\202212161737260_AttemptTableFix.Designer.cs">
+      <DependentUpon>202212161737260_AttemptTableFix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212161746380_AttemptTableFixScoresId.cs" />
+    <Compile Include="Migrations\202212161746380_AttemptTableFixScoresId.Designer.cs">
+      <DependentUpon>202212161746380_AttemptTableFixScoresId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212161856580_SCoresIdSubtract.cs" />
+    <Compile Include="Migrations\202212161856580_SCoresIdSubtract.Designer.cs">
+      <DependentUpon>202212161856580_SCoresIdSubtract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StartUp\StartUp.csproj">
+      <Project>{309cffae-075c-4c61-9911-6d17ef137e5c}</Project>
+      <Name>StartUp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202212111136365_InitialCreate.resx">
+      <DependentUpon>202212111136365_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212111252524_ObjectComplete.resx">
+      <DependentUpon>202212111252524_ObjectComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212111254225_ObjectComplete1.resx">
+      <DependentUpon>202212111254225_ObjectComplete1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212111443457_ObjectComplete2.resx">
+      <DependentUpon>202212111443457_ObjectComplete2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212111904455_ObjectCompleteVerification.resx">
+      <DependentUpon>202212111904455_ObjectCompleteVerification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212111924151_Certificate.resx">
+      <DependentUpon>202212111924151_Certificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212111941233_Certificate1.resx">
+      <DependentUpon>202212111941233_Certificate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212112109200_Scores.resx">
+      <DependentUpon>202212112109200_Scores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212152006257_Scores2nd.resx">
+      <DependentUpon>202212152006257_Scores2nd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212161737260_AttemptTableFix.resx">
+      <DependentUpon>202212161737260_AttemptTableFix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212161746380_AttemptTableFixScoresId.resx">
+      <DependentUpon>202212161746380_AttemptTableFixScoresId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212161856580_SCoresIdSubtract.resx">
+      <DependentUpon>202212161856580_SCoresIdSubtract.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\IronPdf.Native.Chrome.Windows.2022.11.10299\build\IronPdf.Native.Chrome.Windows.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\IronPdf.Native.Chrome.Windows.2022.11.10299\build\IronPdf.Native.Chrome.Windows.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\IronPdf.Native.Chrome.Windows.2022.11.10299\build\IronPdf.Native.Chrome.Windows.targets" Condition="Exists('..\packages\IronPdf.Native.Chrome.Windows.2022.11.10299\build\IronPdf.Native.Chrome.Windows.targets')" />
+</Project>
